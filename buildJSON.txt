@@ -2,8 +2,8 @@
     "CompanyName": "SproutIT",
     "Build": "Domain Controller",
     "ReleaseDate": {
-        "Who": "Phil Waller",
-        "date": "13/11/18"
+        "Who": "Philip Waller",
+        "date": "12/11/18"
     },
 	
 	"Install": [
