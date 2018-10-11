@@ -1,0 +1,54 @@
+{
+    "CompanyName": "SproutIT",
+    "Build": "Domain Controller",
+    "ReleaseDate": {
+        "Who": "Phil Waller",
+        "date": "11/10/18"
+    },
+	
+	"Install": [
+      "Install-ADDSForest"
+    ],
+    
+    "Features" : [
+      "DHCP",
+      "RSAT-DHCP",
+	  "AD-Domain-Services"
+    ],
+    "Services" : {
+  		"Kdc"     : "Running",
+  		"DNS"     : "Running",
+  		"DFSR"    : "Running",
+  		"IsmServ" : "Running",
+  		"NTDS"    : "Running"
+    },
+    
+    "Options" : {
+        "DatabasePath"           : "c:\\windows\\NTDS",
+        "DomainMode"             : "Win2012R2",
+        "DomainName"             : "mydomain.com",
+    	"DomainNetbiosName"      : "MYDOMAIN",
+  		"ForestMode"             : "Win2012R2",
+  		"InstallDns"             : "$true",
+  		"LogPath"                : "C:\\Windows\\NTDS",
+  		"NoRebootOnCompletion"   : "$false",
+  		"SysvolPath"             : "C:\\Windows\\SYSVOL",
+        "Force"                  : "$true"
+      },
+    
+    "Networking" : {
+       "IPAddress" : "192.168.103.105",
+       "Gateway"   : "192.168.100.2",
+       "DNS"       : "192.168.103.105"
+        },
+    
+    "Name" : [
+      "DC01"
+      ],
+      
+    "Credentials" : {
+      "Username"  : "Administrator",
+      "Password"  : "Pa55w0rd"
+    }
+    
+  }
